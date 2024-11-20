@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Memoria</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="modal" id="modalNumero">
+            <h1>Número a Memorizar</h1>
+            <h2 class="numero-aleatorio"></h2>
+        </div>
+        <div class="input-area">
+            <h1>Ingresa los Números</h1>
+            <div class="input-container">
+                <input type="text" id="numeroIngresado" placeholder="Ingresa el número memorado">
+                <button id="validarBtn">Validar</button>
+            </div>
+            <div id="mensaje" class="mensaje"></div>
+        </div>
+    </div>
+
+    <div class="game-over-modal" id="gameOverModal">
+        <h1>GAME OVER</h1>
+        <p>¿Quieres volver a jugar?</p>
+        <button id="restartBtn">Reiniciar</button>
+    </div>
+
+    <script src="javascript.js"></script>
+</body>
+</html>

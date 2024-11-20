@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'koulen', sans-serif;
+}
+
+body {
+    background: url("../../img/leo-portatil/inicio-leo2.jpg") center/cover no-repeat fixed;
+    animation: moveBackground 30s linear infinite;
+    color: #FFFFFF;
+}
+
+.overlay {
+    background: rgba(0, 0, 0, 0.75);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 20px;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.logo {
+    width: 150px;
+}
+
+.nav-links a {
+    color: #47FF47;
+    text-decoration: none;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #72d7;
+}
+
+.form-container {
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+.logo-center {
+    width: 80%;
+    margin-bottom: 20px;
+}
+
+.registration-form {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 20px 5px rgba(0, 255, 55, 0.5);
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+label {
+    font-size: 18px;
+    color: #47FF47;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid transparent;
+    background: rgba(255, 255, 255, 0.2);
+    color: #FFFFFF;
+    border-radius: 5px;
+    outline: none;
+    transition: border 0.3s ease;
+}
+
+input:focus {
+    border-color: #72d7;
+    box-shadow: 0px 0px 10px #72d7;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 10px;
+    background: #72d7;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background 0.3s ease;
+}
+
+.btn-submit:hover {
+    background: #47FF47;
+}
+
+@keyframes moveBackground {
+    0% { background-position: top; }
+    50% { background-position: bottom; }
+    100% { background-position: top; }
+}

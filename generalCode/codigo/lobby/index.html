@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lobby de Espera..</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="lobby">
+            <h1>Lobby</h1>
+            <div class="lobby-info">
+                <div class="players-section">
+                    <h2>Jugadores en la sala:</h2>
+                    <ul id="players-list">
+                    </ul>
+                    <p>Jugadores listos: <span id="ready-count">0</span></p>
+                </div>
+
+                <!-- Sección de acciones del lobby -->
+                <div class="lobby-actions">
+                    <button id="ready-button" class="button-primary">Estoy Listo</button>
+                    <button id="start-game" class="button-primary" style="display: none;">Iniciar Juego</button>
+                </div>
+
+                <div class="lobby-timer">
+                    <p>Tiempo para comenzar: <span id="timer">30</span> segundos</p>
+                </div>
+            </div>
+
+            <div class="game-rules">
+                <h2>Reglas del Juego</h2>
+                <p>
+                    El juego de memorizar consiste en recordar la secuencia de elementos mostrados. Cuantos más aciertos consecutivos, más puntos obtendrás. 
+                    ¡Prepárate para desafiar tu memoria!
+                </p>
+            </div>
+        </div>
+
+        <div class="chat">
+            <h2>Chat</h2>
+            <div class="chat-box" id="chat-box">
+            </div>
+            <input type="text" id="chat-input" placeholder="Escribe un mensaje..." />
+            <button id="send-message" class="button-secondary">Enviar</button>
+        </div>
+    </div>
+
+    <script src="generador.js"></script>
+</body>
+</html>

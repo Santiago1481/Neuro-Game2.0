@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olvidaste tu contraseña</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="opacida">
+        <div class="container">
+            <div class="form-container">
+                <h1>¿Olvidaste tu contraseña?</h1>
+                <p>Ingresa tu correo electrónico para recibir un enlace de restablecimiento.</p>
+                <form method="POST" action="../conexionDB/00-enviar_codigo.php">
+                    <div class="input-group">
+                        <label for="correo">Correo electrónico:</label>
+                        <input type="email" name="correo" id="correo" required placeholder="example@dominio.com">
+                    </div>
+                    <button type="submit" class="submit-btn">Enviar enlace</button>
+                </form>
+                <a href="inicio.html" class="back-btn">Volver atrás</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

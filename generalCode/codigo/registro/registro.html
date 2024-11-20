@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro | NeuroGame</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../librerias/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../../librerias/fontawesome/css/all.css">
+</head>
+<body>
+    <div class="overlay">
+        <main class="form-container">
+            <img src="../../img/logoTipo/logoConTexto-removebg-preview.png" class="logo-center">
+            <form method="POST" action="../conexionDB/recibirData.php" class="registration-form">
+                <div class="form-group">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" name="nombre" id="nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="correo">Correo:</label>
+                    <input type="email" name="correo" id="correo" required>
+                </div>
+                <div class="form-group">
+                    <label for="contrasena">Contraseña:</label>
+                    <input type="password" name="contrasena" id="contrasena" required>
+                </div>
+                <button type="submit" class="btn-submit">Registrar</button>
+            </form>
+        </main>
+    </div>
+
+    <script src="../../librerias/bootstrap/js/bootstrap.js"></script>
+</body>
+</html>
+

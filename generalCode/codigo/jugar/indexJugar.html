@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jugar</title>
+    <!-- Bootstrap y FontAwesome -->
+    <link rel="stylesheet" href="../../librerias/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../../librerias/fontawesome/css/all.css">
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <!-- Botón de regreso -->
+    <div class="boton-regreso">
+        <a href="../modo_cargar/regreso_3/index.html" class="btn-back">
+            <i class="fa-solid fa-person-walking-dashed-line-arrow-right fa-bounce"></i>
+        </a>
+    </div>
+
+    <!-- Contenedor del slider -->
+    <div class="contenedor-slider">
+        <button class="anterior" onclick="cambiarDiapositiva(-1)">&#10094;</button>
+        <div class="slider">
+            <div class="diapositiva borde-brillante" id="diapositiva1">
+                <img src="../../img/leo.simon (1).jpg" alt="Diapositiva 1">
+            </div>
+            <div class="diapositiva" id="diapositiva2">
+                <img src="../../img/leo.simon (3).jpg" alt="Diapositiva 2">
+            </div>
+            <div class="diapositiva" id="diapositiva3">
+                <img src="../../img/leo.simon (2).jpg" alt="Diapositiva 3">
+            </div>
+        </div>
+        <button class="siguiente" onclick="cambiarDiapositiva(1)">&#10095;</button>
+    </div>
+
+    <!-- Botón redirigir en el fondo central -->
+    <div class="central-bottom">
+        <button class="boton-redirigir" onclick="irAPagina()">JUGAR</button>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../../librerias/bootstrap/js/bootstrap.js"></script>
+    <script src="../../librerias/fontawesome/js/all.js"></script>
+    <script src="funcionalidad.js"></script> 
+</body>
+</html>
+
+
+
+
+
+
+
+

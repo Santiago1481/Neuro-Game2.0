@@ -1,0 +1,125 @@
+/* Estilos generales */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: linear-gradient(135deg, rgba(34, 49, 63, 0.9), rgba(20, 32, 44, 0.9)),
+              url('../../img/DALL·E_2024-10-26_cosmic_background.webp');
+  background-image: url('../../img/Leonardo_Phoenix_Create_a_dynamic_and_sleek_logo_for_GG_Vest_U_1.webp');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  color: white;
+}
+
+/* Estilos del botón de regreso */
+.boton-regreso {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 10;
+}
+.btn-back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(97, 46, 119, 0.384);
+  color: #ffffff;
+  border-radius: 50%;
+  font-size: 24px;
+  transition: all 0.3s ease;
+}
+.btn-back:hover {
+  background-color: rgba(115, 33, 148, 0.142);
+  color: black;
+  transform: scale(1.1);
+}
+
+/* Contenedor del slider */
+.contenedor-slider {
+  position: relative;
+  width: 80vw;
+  height: 50vh;
+  margin-top: 5vh;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
+}
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  height: 100%;
+}
+.diapositiva {
+  min-width: 100%;
+  height: 100%;
+}
+.diapositiva img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Botones de navegación en slider */
+.anterior, .siguiente {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 2vw;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+.anterior:hover, .siguiente:hover {
+  background-color: rgba(115, 33, 148, 0.142);
+  color: black;
+}
+.anterior { left: 10px; }
+.siguiente { right: 10px; }
+
+/* Efectos visuales */
+.borde-brillante {
+  border: 0.5vw solid #FFD700;
+  animation: brillo 1s infinite;
+}
+@keyframes brillo {
+  0%, 100% { box-shadow: 0 0 1vw #FFD700; }
+  50% { box-shadow: 0 0 2vw #FFD700; }
+}
+
+/* Estilo del botón redirigir */
+.central-bottom {
+  display: flex;
+  justify-content: center;
+  margin-top: 2vh;
+}
+.boton-redirigir {
+  padding: 15px 30px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 1.5vw;
+  transition: all 0.3s ease;
+}
+.boton-redirigir:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+  box-shadow: 0px 5px 15px rgba(0, 123, 255, 0.4);
+}

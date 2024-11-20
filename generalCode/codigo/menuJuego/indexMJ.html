@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú del Juego</title>
+
+    <link rel="icon" href="../../img/logoTipo/logo.jpg">
+    <link rel="stylesheet" href="../../librerias/bootstrap/css/bootstrap.css">
+    <script src="../../librerias/bootstrap/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="../../librerias/fontawesome/css/all.css">
+    <script src="../../librerias/fontawesome/js/all.js"></script>
+    <link rel="stylesheet" href="estilos.css">
+
+  </head>
+<body>
+    <header>
+      <div class="contenedor-iconos">
+        <button type="button" class="estilos-boton" data-bs-toggle="offcanvas" data-bs-target="#Listas">
+          <a  data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+            <i class="fa-solid fa-list"></i>
+          </a>
+        </button>
+      </div>
+      <div class="contenedor-iconos">
+        <button class="estilos-boton" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+            <a href="#" class="tienda"><i class="fa-solid fa-store"></i></a>
+        </button>
+        <button type="button" class="estilos-boton informacionjuego" data-bs-toggle="modal" data-bs-target="#exampleModal3">
+            <a href="#" class="ayuda"><i class="fa-solid fa-question"></i></a>
+          </button>
+        
+        
+        <button type="button" class="estilos-boton monedas-botton" data-bs-toggle="modal" data-bs-target="#Logros">
+          <a href="#" class="logros"><i class="fa-solid fa-award"></i></a>
+        </button>
+      </div>
+    </header> 
+   
+    <div class="logo">
+      <img src="../../img/logoTipo/logoConTexto-removebg-preview.png">
+    </div>
+
+ 
+    <div class="lunas">
+      <img src="../../img/lunas-removebg-preview.png" alt="" srcset="">
+    </div>
+
+    <div class="tierra">
+      <img src="../../img/Planetas/tierra-pixeliado.png" alt="" srcset="">
+    </div>
+  
+    
+    <div class="martes">
+      <img src="../../img/Planetas/martes.png" alt="" srcset="">
+    </div>
+    <button class="play-batman">
+      <span>PLAY NOW</span>
+    </button>
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Menu</h5>
+        <button type="button" class="btn-close cerrar-menu" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <div class="menu-informacion">
+          NeuroGame es un juego diseñado para mejorar la memoria y la concentración mediante desafíos interactivos. Ofrece distintos modos y tipos de juegos, como Simón dice y cartas, que ponen a prueba la capacidad de recordar patrones y secuencias, con opciones de personalización y tablas de puntuación para seguir el progreso.
+        </div>
+        <div class="dropdown ">
+            <div class="conte-perfil">
+                <div class="perfil">Perfil <i class="fa-regular fa-user" style="color: #631175;"></i></div>
+            </div>
+            <div class="conte-configuracion">
+              <div class="configuracion">Configuracion<i class="fa-solid fa-gear" style="color: #631177;"></i></div>
+            </div>
+            <a href="../inicio/inicio.html">
+              <div class="conte-cerrarsesion">
+                <div class="cerrarsesion">Cerrar Sesion<i class="fa-solid fa-right-from-bracket fa-rotate-180" style="color: #631177;"></i></div>
+              </div>
+            </a>
+            <div class="conte-caminar">
+              <img src="../../img/6e513a01fb26ac05fbc2bd4ad8f526-unscreen (1).gif" alt="">
+            </div>
+        </div>
+      </div>
+    </div>
+    <!-- modalPerfil -->
+<!-- Modal Perfil -->
+<div class="modal fade" id="modalPerfil" tabindex="-1" aria-labelledby="modalPerfilLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalPerfilLabel">Perfil</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="perfil-info text-center">
+          <!-- Foto de Perfil -->
+          <img src="../../img/avatar.png" alt="Avatar" class="perfil-avatar">
+          <h6 id="nombreUsuario">Nombre de Usuario</h6>
+          <p id="correoUsuario">Email: usuario@example.com</p>
+          <p id="fechaRegistro">Fecha de Registro: 01/01/2023</p>
+          <!-- Botón para cambiar foto -->
+          <button class="btn btn-primary w-100 mt-3">Cambiar Foto de Perfil</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal Configuración -->
+<div class="modal fade" id="modalConfiguracion" tabindex="-1" aria-labelledby="modalConfiguracionLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalConfiguracionLabel">Configuración</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="configuracion-opciones">
+          <!-- Opción de Modo Oscuro -->
+          <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" id="modoOscuro">
+            <label class="form-check-label" for="modoOscuro">Modo Oscuro</label>
+          </div>
+          <!-- Opción para Sonido de Clic -->
+          <div class="form-check form-switch mt-3">
+            <input class="form-check-input" type="checkbox" id="sonidoClic" checked>
+            <label class="form-check-label" for="sonidoClic">Sonido de Clic</label>
+          </div>
+          <!-- Opción para Sonido de Música -->
+          <div class="form-check form-switch mt-3">
+            <input class="form-check-input" type="checkbox" id="sonidoMusica" checked>
+            <label class="form-check-label" for="sonidoMusica">Sonido de Música</label>
+          </div>
+          <!-- Selección de Idioma -->
+          <div class="form-group mt-3">
+            <label for="idioma">Idioma</label>
+            <select class="form-select" id="idioma">
+              <option>Español</option>
+              <option>Inglés</option>
+              <option>Francés</option>
+            </select>
+          </div>
+          <!-- Botón para guardar cambios -->
+          <button class="btn btn-primary w-100 mt-3" onclick="guardarConfiguracion()">Guardar Cambios</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+ 
+
+<!-- modal tienda -->
+ <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasRightLabel">tienda</h5>
+    <button type="button" class="btn-close cerrar-tienda" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <div class="conte-foto-perfil">
+      <div class="titulo"><h3>Foto de perfil</h3></div>
+      <div></div>
+    </div>
+    <div class="conte-ayuda">
+      <div class="titulo"><h3>ayudas</h3></div>
+      <div></div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Modal  informacion-->
+ <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content scroll">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">informacion</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-dialog modal-dialog-scrollable">
+        <div class="contenedor-informacion">
+        </div>
+      </div>
+      <div class="modal-footer">
+      </div>
+    </div>
+  </div>
+</div>
+<script src="modal.js"></script>
+<script src="configuracion.js"></script>
+</body>
+</html>

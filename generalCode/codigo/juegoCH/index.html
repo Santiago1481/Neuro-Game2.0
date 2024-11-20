@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeuroGame - Modo Solo</title>
+</head>
+<body>
+    <h1>Modo Solo</h1>
+    <button id="iniciarNivel">Iniciar Nivel</button>
+    <button id="guardarProgreso">Guardar Progreso</button>
+
+    <script>
+        document.getElementById('iniciarNivel').onclick = () => {
+            fetch('juego.php?action=iniciarNivel', {
+                method: 'POST',
+                body: JSON.stringify({ idUsuario: 1, idNivel: 1 })
+            }).then(response => response.text()).then(data => alert(data));
+        };
+
+        document.getElementById('guardarProgreso').onclick = () => {
+            fetch('juego.php?action=registrarProgreso', {
+                method: 'POST',
+                body: JSON.stringify({ idUsuario: 1, idNivel: 1, progreso: 50, estado: 'en progreso' })
+            }).then(response => response.text()).then(data => alert(data));
+        };
+    </script>
+</body>
+</html>
