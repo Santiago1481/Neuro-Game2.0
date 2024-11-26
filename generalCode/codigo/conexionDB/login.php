@@ -1,7 +1,7 @@
 <?php
 include('conexion.php');
 include('usuario.php');
-
+session_start();
 class login extends usuario {
     private $insert;
 
@@ -26,6 +26,14 @@ class login extends usuario {
             }
         }
         return false; // Contraseña incorrecta
+
+        // if($resultado = true){
+        //     $_SESSION['nombre_usuario'] = $nombreUsuario['nombre_usuario'];
+        // }
+
+
     }
 }
+
+
 ?>

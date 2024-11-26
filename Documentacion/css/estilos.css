@@ -1,0 +1,150 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fondo general */
+body {
+    background-image: url('../../img/leo-portatil/inicion-leo.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    animation: moverFondo 30s ease-in-out infinite;
+}
+
+@media (max-width: 768px) {
+    body {
+        background-image: url('../../img/leo-movil/leo-movil4.jpg');
+        background-position: center;
+        background-size: cover;
+        background-attachment: scroll;
+    }
+}
+
+@keyframes moverFondo {
+    0%, 100% { background-position: top; }
+    50% { background-position: bottom; }
+}
+
+/* Cabecera */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: rgba(0, 0, 0, 0.6); /* Fondo oscuro con opacidad */
+    box-shadow: 0px 0px 8px 3px rgba(71, 253, 71, 0.6); /* Resalta con un verde vibrante */
+}
+
+.header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #FFD700; /* Color dorado brillante */
+    font-family: 'koulen', sans-serif;
+    animation: position-img 2.5s ease-in-out;
+}
+
+@keyframes position-img {
+    from { transform: translateY(-100vh); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar ul li {
+    margin-right: 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+    text-shadow: 0px 0px 10px rgba(255, 165, 0, 0.8); /* Sombra naranja suave */
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: #ff0076; /* Rosa brillante para resaltar */
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #1F2A44; /* Azul oscuro */
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 20px;
+    color: #ecf0f1; /* Texto blanco */
+}
+
+.sidebar .menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar .menu ul li {
+    padding: 15px;
+}
+
+.sidebar .menu ul li a {
+    text-decoration: none;
+    color: #ecf0f1; /* Blanco suave */
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar .menu ul li a:hover, .sidebar .menu ul li a.active {
+    background-color: #16a085; /* Verde agua para hover y activo */
+    color: white;
+}
+
+.sidebar .menu ul li a i {
+    margin-right: 10px;
+}
+
+/* Main content */
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+    background-color: #ecf0f1; /* Fondo blanco suave para contraste */
+}
+
+.main-content h1, .main-content h2 {
+    color: #2c3e50; /* Azul oscuro para los encabezados */
+    margin-bottom: 15px;
+}
+
+.main-content p {
+    font-size: 16px;
+    color: #7f8c8d; /* Gris suave para los textos */
+}
+
+/* Secciones ocultas */
+.hidden {
+    display: none;
+}
+
+/* Estilos Responsivos */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+    }
+    .main-content {
+        margin-left: 0;
+    }
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+
